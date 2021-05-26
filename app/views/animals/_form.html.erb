@@ -1,4 +1,4 @@
-<div data-controller="animal-form">
+<div data-controller="animal-form" data-animal-form-counter-value = '0' data-animal-form-age-validation-value=''>
   <%= form_with(model: animal) do |form| %>
     <% if animal.errors.any? %>
       <div id="error_explanation">
@@ -14,12 +14,18 @@
 
     <div class="field">
       <%= form.label :name %>
-      <%= form.text_field :name %>
+      <%= form.text_field :name ,
+      'data-animal-form-target': 'name',
+      'data-action': 'keyup->animal-form#countCharacters' %>
+      <span data-animal-form-target='display'><%= animal.name.to_s.size %></span>
     </div>
 
     <div class="field">
       <%= form.label :age %>
-      <%= form.number_field :age %>
+      <%= form.number_field :age,
+       'data-animal-form-target': 'age',
+       'data-action': 'change->animal-form#validateAge' %>
+      <span data-animal-form-target='ageValidationMessage'></span>
     </div>
 
     <div class="actions">
