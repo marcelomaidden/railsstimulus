@@ -58,6 +58,12 @@ Start server with:
     rails server
 ```
 
+Open up your application on your preferred browser
+
+```
+   http://localhost:3000
+```
+
 👤 **Marcelo Fernandes**
 
 - GitHub: [@marcelomaidden](https://github.com/marcelomaidden)
