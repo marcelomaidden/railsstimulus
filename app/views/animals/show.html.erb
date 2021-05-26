@@ -1,14 +1,16 @@
-<p id="notice"><%= notice %></p>
+<div class="container mw-50">
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @animal.name %>
-</p>
+  <p>
+    <strong>Name:</strong>
+    <%= @animal.name %>
+  </p>
 
-<p>
-  <strong>Age:</strong>
-  <%= @animal.age %>
-</p>
+  <p>
+    <strong>Age:</strong>
+    <%= @animal.age %>
+  </p>
 
-<%= link_to 'Edit', edit_animal_path(@animal) %> |
-<%= link_to 'Back', animals_path %>
+  <%= link_to 'Edit', edit_animal_path(@animal) %> |
+  <%= link_to 'Back', animals_path %>
+</div>

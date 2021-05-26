@@ -3,13 +3,13 @@ import { Controller } from "stimulus"
 export default class extends Controller {
   static targets = ['name', 'display', 'age', 'ageValidationMessage'];
   static values = {counter: Number, ageValidation: Boolean};
+  static classes = ['error'];
 
   countCharacters() {
     this.counterValue = this.nameTarget.value.length;
   }
 
   validateAge() {
-    console.log(this.ageTarget.value)
     this.ageValidationValue = this.ageTarget.value < 1
   }
 
@@ -18,8 +18,13 @@ export default class extends Controller {
   }
 
   ageValidationValueChanged() {
-    console.log(this.ageValidationValue)
-    this.ageValidationValue === true ? this.ageValidationMessageTarget.textContent = 'Invalid age': 
-    this.ageValidationMessageTarget.textContent = ''
+    if (this.ageValidationValue === true) {
+      this.ageValidationMessageTarget.textContent = 'Invalid age';
+      this.ageValidationMessageTarget.classList.add(this.errorClass);
+    }      
+    else {
+      this.ageValidationMessageTarget.textContent = '';
+      this.ageValidationMessageTarget.classList.remove(this.errorClass);
+    }      
   }
 }
