@@ -17,7 +17,7 @@ Built with [Ruby on Rails](https://rubyonrails.org/) framework and,
 
 In order to clone the repository, please follow this instructions
 
-- Install following the instructions available at [Git](https://git-scm.com/downloads) 
+- Install Git following the instructions available at [Git](https://git-scm.com/downloads) 
 - Install Ruby following the instructions available at [Ruby](https://www.ruby-lang.org/en/documentation/installation/)
 
 ## Getting Started
