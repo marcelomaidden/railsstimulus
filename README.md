@@ -1,24 +1,78 @@
-# README
+# Rails Stimulus
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This project was built to test how to add Stimulus JS on a Rails application to manipulate the DOM using Stimulus controllers, targets, actions and, values.
+It performs a counter on when the animal name is typed and, validate the animal age
 
-Things you may want to cover:
+Built with [Ruby on Rails](https://rubyonrails.org/) framework and,
+ [Stimulus JS](https://github.com/hotwired/stimulus).
 
-* Ruby version
+![screenshot](./screenshot.png)
 
-* System dependencies
+## Prerequisites
 
-* Configuration
+- Ruby v2.7.0
+- Ruby on Rails v6.1.3
+- Stimulus JS 2.0.0
+- Git
 
-* Database creation
+In order to clone the repository, please follow this instructions
 
-* Database initialization
+- Install following the instructions available at [Git](https://git-scm.com/downloads) 
+- Install Ruby following the instructions available at [Ruby](https://www.ruby-lang.org/en/documentation/installation/)
 
-* How to run the test suite
+## Getting Started
 
-* Services (job queues, cache servers, search engines, etc.)
+To get a local copy up and running follow these simple example steps.
 
-* Deployment instructions
+## Clone the repository
 
-* ...
+```
+   git clone git@github.com:marcelomaidden/railsstimulus.git
+   cd railsstimulus
+```
+
+### Setup
+
+Install gems with:
+
+```
+   bundle install
+```
+
+Setup database with:
+
+```
+   rails db:create
+   rails db:migrate
+   rails db:seed
+```
+Install JavaScript packages 
+
+`yarn install --check-files`
+
+### Usage
+
+Start server with:
+
+```
+    rails server
+```
+
+👤 **Marcelo Fernandes**
+
+- GitHub: [@marcelomaidden](https://github.com/marcelomaidden)
+- Twitter: [@marcelomaidden](https://twitter.com/marcelomaidden)
+- LinkedIn: [Marcelo Fernandes](https://linkedin.com/in/marcelofernandesdearaujo)
+
+## Acknowledments
+- Ruby on Rails and Stimulus JS creators
+
+## 🤝 Contributing
+
+Contributions, issues and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/marcelomaidden/railsstimulus/issues/).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
