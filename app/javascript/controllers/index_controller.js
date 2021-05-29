@@ -31,7 +31,7 @@ export default class extends Controller {
     const table = this.#createTable(['Name', 'Age', 'Actions']);
     const tBody = document.createElement('tbody');
     setTimeout(() => {
-      return fetch('http://localhost:3000/animals.json')
+      return fetch('/animals.json')
       .then(result => result.json())
       .then(animals => {
         animals.forEach(animal => {
