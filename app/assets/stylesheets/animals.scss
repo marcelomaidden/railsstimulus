@@ -5,3 +5,33 @@ div.container {
   max-width: 300px;
   background-color: rgb(224, 224, 207);
 }
+
+.show-message {
+  height: 30px;
+  width: 250px;
+  display: block;
+  text-align: center;
+  animation-name: fade;
+  animation-duration: 4s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  background-color: rgb(233, 152, 152);
+  padding: 5px;
+  margin-top: 3px;
+  border-radius: 5px;
+}
+
+@keyframes fade {
+  from {
+    height: 0; 
+    display: none; 
+    color: rgb(224, 224, 207);
+    background-color: rgb(224, 224, 207);
+  }
+  to {
+    height: 30px; 
+    display: block; 
+    color: white;
+    background-color: rgb(233, 152, 152);
+  }
+}

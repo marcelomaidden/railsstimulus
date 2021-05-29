@@ -17,8 +17,18 @@ export default class extends Controller {
     this.displayTarget.textContent = this.counterValue;
   }
 
+  validateSubmit(event) {
+    if (this.ageTarget < 1){
+      this.ageValidationValue = true;
+      this.ageValidationMessageTarget.textContent = 'Invalid age';
+      this.ageValidationMessageTarget.classList.add(this.errorClass);
+    }      
+    if(this.ageValidationValue || this.ageTarget.value < 1 || this.nameTarget.value === '')
+      event.preventDefault();
+  }
+
   ageValidationValueChanged() {
-    if (this.ageValidationValue === true) {
+    if (this.ageValidationValue === true || this.ageTarget < 1) {
       this.ageValidationMessageTarget.textContent = 'Invalid age';
       this.ageValidationMessageTarget.classList.add(this.errorClass);
     }      

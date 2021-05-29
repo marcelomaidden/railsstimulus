@@ -2,7 +2,7 @@
   data-controller="animal-form"
   data-animal-form-counter-value = '0'
   data-animal-form-age-validation-value='false'
-  data-animal-form-error-class = 'bg-danger'
+  data-animal-form-error-class = 'show-message'
 >
   <%= form_with(model: animal) do |form| %>
     <% if animal.errors.any? %>
@@ -32,11 +32,11 @@
         class: 'form-control',
        'data-animal-form-target': 'age',
        'data-action': 'change->animal-form#validateAge' %>
-      <span class = 'w-100 mt-3 p-3 rounded d-flex text-white' data-animal-form-target='ageValidationMessage'></span>
+      <span data-animal-form-target='ageValidationMessage'></span>
     </div>
 
     <div class="actions mt-3">
-      <%= form.submit class: 'btn btn-success' %>
+      <%= form.submit class: 'btn btn-success', 'data-action': 'click->animal-form#validateSubmit' %>
     </div>
   <% end %>
 </div>
