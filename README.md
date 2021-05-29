@@ -12,6 +12,7 @@ Built with [Ruby on Rails](https://rubyonrails.org/) framework and,
 
 [Rails Stimulus](http://rails-stimulus.herokuapp.com/)
 
+
 ## Prerequisites
 
 - Ruby v2.7.0
