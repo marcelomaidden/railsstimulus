@@ -1,7 +1,7 @@
 import { Controller } from "stimulus"
 
 export default class extends Controller {
-  static targets = ['name', 'display', 'age', 'ageValidationMessage'];
+  static targets = ['name', 'display', 'age', 'ageValidationMessage', 'animalsJson'];
   static values = {counter: Number, ageValidation: Boolean};
   static classes = ['error'];
 
@@ -15,6 +15,14 @@ export default class extends Controller {
 
   counterValueChanged() {
     this.displayTarget.textContent = this.counterValue;
+  }
+
+  async fetchAnimals()
+  {
+    const fetching = await fetch('http://localhost:3000');
+    fetching.then(result => {
+      this.animalsJsonTarget.innerHTML = result.json();
+    });    
   }
 
   validateSubmit(event) {

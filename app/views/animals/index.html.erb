@@ -24,7 +24,12 @@
       <% end %>
     </tbody>
   </table>
-
+  <div data-controller='index'>
+    <button data-action="index#fetchAnimals">Buscar animais</button>
+    <div data-index-target="animalsJson"></div>
+    <div class="spinner-border d-none" role="status">
+    </div>
+  </div>
   <br>
 
   <%= link_to 'New Animal', new_animal_path %>
